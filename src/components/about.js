@@ -10,7 +10,7 @@ import { Col, NavbarText, Row } from 'react-bootstrap';
 function App() {
   
   return (
-    <section className='bg-default '> 
+    <section className='bg-default' id="about-us"> 
         <div className='p-2'>
         <Row className='m-3'>
             <Col md={6} >

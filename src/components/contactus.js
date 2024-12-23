@@ -4,8 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Col, NavbarText, Row } from 'react-bootstrap';
-import budha from '../images/360_buddajpg.jpeg'
+import { Col, FormControl, NavbarText, Row } from 'react-bootstrap';
 import hotelbed from '../images/hotel_bed.jpeg'
 import line from '../images/Line 15.png'
 import Form from 'react-bootstrap/Form';
@@ -86,13 +85,13 @@ function ContactUs() {
                     style={{ height: '100px' }}
                     />
                 </FloatingLabel>
-                <Button variant="outline-warning" size="lg" className='mt-2 float-end'>
+                <Button variant="outline-warning" size="lg" className='mt-2 rounded-5 float-start'>
                 Submit
                 </Button>
                 </Col>
                 <Col md={6} className='mt-5'>
-                    <img className='w-50' src={hotelbed} style={{transform:"rotate(15.5deg)"}}></img>
-                    <img className='w-50' src={budha} style={{marginLeft:"-70px",position:"relative"}}></img>
+                    {/* <img className='w-50' src={hotelbed} style={{transform:"rotate(15.5deg)"}}></img>
+                    <img className='w-50' src={budha} style={{marginLeft:"-70px",position:"relative"}}></img> */}
                 </Col>
             </Row>
        </div>

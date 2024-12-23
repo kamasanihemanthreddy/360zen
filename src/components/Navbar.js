@@ -10,14 +10,14 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function App() {
   
   return (
-    <Navbar expand="lg" className="bg-transparent">
+    <Navbar expand="lg" className="bg-transparent" id="home">
       <Container>
         <Navbar.Brand href="#home"><img src={logo} style={{"max-width":"200px"}}></img></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-white'></Navbar.Toggle>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='rounded-5'></Navbar.Toggle>
         <Navbar.Collapse className="justify-content-end">
            <Nav className="flex-column float-end">
-            <Nav.Link href="#" className='text-white p-1 link-hover'>Home</Nav.Link>
-            <Nav.Link eventKey="#" className='text-white p-1 link-hover'>Our Recent Works</Nav.Link>
+            <Nav.Link href="#home" className='text-white p-1 link-hover'>Home</Nav.Link>
+            <Nav.Link href="#weoffer" className='text-white p-1 link-hover'>Our Recent Works</Nav.Link>
             <Nav.Link href="#contactus" className='text-white p-1 link-hover'>Contact US</Nav.Link>
           </Nav>
         </Navbar.Collapse>

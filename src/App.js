@@ -25,19 +25,9 @@ function App() {
           
         </Carousel.Caption>
         <Carousel.Caption className='substract-caption'>
-          <a ><img className='substract-img' src={Substract}></img></a>
+          <a href="#about-us"><img className='substract-img' src={Substract}></img></a>
         </Carousel.Caption>
       </Carousel.Item>
-      {/* /* <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner}
-          alt="First slide"
-        />
-      <Carousel.Caption>
-        <a ><img></img>new test</a>
-        </Carousel.Caption>
-        </Carousel.Item> */}
     </Carousel> 
 
   );
