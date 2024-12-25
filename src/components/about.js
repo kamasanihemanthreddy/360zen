@@ -1,9 +1,6 @@
 import * as React from 'react';
 import vr from '../images/vr.png'
-import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import { Col, NavbarText, Row } from 'react-bootstrap';
 
 

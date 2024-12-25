@@ -1,8 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import avhomestay1 from '../images/avhomestay.jpeg'
-import budha from '../images/360_buddajpg.jpeg'
 import line from '../images/Line 15.png'
-import Button from "react-bootstrap/Button";
 import Slider from "react-slick";
 function RecentWorks(){
     const settings = {
@@ -58,7 +56,7 @@ function RecentWorks(){
                     <img className="rounded-circle " src={d.photo}  style={{"height":"100px"}}></img>
                 </div>
                     <div className="mt-3 mb-3">
-                    <p className="text-justify-center about-line">{d.message}</p>
+                    <p className="text-justify-center ">{d.message}</p>
                     </div>
                     <p className="float-end">— {d.name}</p>
                 </Col>

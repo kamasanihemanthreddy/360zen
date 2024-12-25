@@ -1,7 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import Carousel from 'react-bootstrap/Carousel';
 import Card from 'react-bootstrap/Card';
-import Button from "react-bootstrap/Button";
 import bedroomimg from '../images/doublebedroom.jpeg'
 import villhall from '../images/villahall.jpeg'
 import hometheater from '../images/hometheater.jpeg'
@@ -23,7 +21,7 @@ const data =[{
 },{
   title:"04.Custom Virtual Tour Solutions",
   image:bedroomimg,
-  content:"Every business is unique and so are it needs. we offer custom virtual tour solutions tailored to your specific industry and "
+  content:"Every business is unique and so are it needs. we offer custom virtual tour solutions tailored to your specific industry and audience. wheather you want to add interactive elements, include voiceovers, or design a fully branded tour, we got you covered."
 }]
 
 

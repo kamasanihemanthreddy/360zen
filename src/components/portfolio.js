@@ -1,13 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import Carousel from 'react-bootstrap/Carousel';
-import Card from 'react-bootstrap/Card';
-import Button from "react-bootstrap/Button";
-import bedroomimg from '../images/doublebedroom.jpeg'
-import villhall from '../images/villahall.jpeg'
-import hometheater from '../images/hometheater.jpeg'
-import line from '../images/Line 15.png'
 import React,{ useState } from "react";
-import Slider from "react-slick";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import gallery_1 from '../images/gallery_1.png'
@@ -45,7 +37,7 @@ function Portfolio(){
                     id="justify-tab-example"
                     className="mb-3 justify-content-center custom-nav-tabs gallery-item"
                     >
-                    <Tab eventKey="home" title="All">
+                    <Tab eventKey="home" title="All" >
                         <Row className="flex col-12 ">
                         {all.map((image, index) => (
                             <Col md={3} className="mb-1 gallery-item ">
@@ -63,7 +55,7 @@ function Portfolio(){
                         ))}
                         </Row>
                     </Tab>
-                    <Tab eventKey="Realestate" title="Real Estate">
+                    <Tab eventKey="Realestate" title="Real Estate" >
                     <Row className="flex col-12 ">
                         {realestate.map((image, index) => (
                             <Col md={3} className="mb-1 gallery-item ">
