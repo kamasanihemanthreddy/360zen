@@ -11,18 +11,20 @@ import AppNavbar from './components/Navbar'
 import About from './components/about'
 import Footer from './components/footer';
 import ContactUs from './components/contactus';
-import RecentWorks from './components/recentworks'
+import Testimonial from './components/testimonials'
 import WeOffer from './components/weoffer'
 import Portfolio from './components/portfolio';
+import WhyUs from './components/whyus';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppNavbar />
     <App />
     <About/>
-    <Portfolio/>
     <WeOffer />
-    <RecentWorks/>
+    <Portfolio/>
+    <WhyUs/>
+    <Testimonial/>
     <ContactUs />
     <Footer />
 

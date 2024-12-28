@@ -1,8 +1,9 @@
 import { Col, Row } from "react-bootstrap";
 import avhomestay1 from '../images/avhomestay.jpeg'
 import line from '../images/Line 15.png'
+import testimonials_bg from '../images/testmonial_bg.png'
 import Slider from "react-slick";
-function RecentWorks(){
+function Testimonial(){
     const settings = {
         dots: true,
         infinite: true,
@@ -37,37 +38,33 @@ function RecentWorks(){
 
  return (
     <>
-    <section className="" id='recentworks' >
-        <div className="p-5">
-        <Row>
-            <Col md={8}>
-                <span className='custom-font'>Portfolio</span><span className='subheading-font'> Testimonial</span><img src={line}></img>
-                
-            </Col>
-            {/* <Col md={4}>
-            <Button variant="outline-warning" className='float-end btn-lg rounded-5 mt-5'>Explore More <i class="bi bi-arrow-up-right"></i></Button>
-            </Col> */}
-        </Row>
+    <section className="" id='testimonals' style={{backgroundImage:`url(${testimonials_bg})`,}}>
+        <div className="p-5 text-align-center" style={{"background-color": "rgb(54 52 52 / 70%)"}}>
+        <div className="div-center">
+            <h4 className="text-light">TESTIMONIALS</h4>
+            
+        </div>
+        <div className="div-center">
+        <h1 className="text-light subheading-font">What Our Clients Says?</h1>
+        </div>
         <Row className="mt-3">
             <Slider {...settings}>
             {testimonials.map((d) => (
-            <Col  md={12} className="justify-content-center">
-                <div className="justify-content-center div-center">
-                    <img className="rounded-circle " src={d.photo}  style={{"height":"100px"}}></img>
-                </div>
+            <Col  md={12} className="justify-content-center ">
+                <div className="testmonial-text">
                     <div className="mt-3 mb-3">
-                    <p className="text-justify-center ">{d.message}</p>
+                    <p className="text-justify-center text-light">{d.message}</p>
+                    <h5 className="float-end text-light">— {d.name}</h5>
                     </div>
-                    <p className="float-end">— {d.name}</p>
+                    </div>
                 </Col>
             ))}
            </Slider>
         </Row>
-        
         </div>
     </section>
     </>
  );
 }
 
-export default RecentWorks;
+export default Testimonial;
