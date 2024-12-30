@@ -24,9 +24,6 @@ const images = [
     { src: gallery_2, size: 'small', text:"Taj Hotel, ",address:"Mumbai, India", image_name:"Hotel" },
     { src: gallery_5, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
     { src: gallery_4, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
-    { src: gallery_5, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
-    { src: gallery_6, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
-    { src: gallery_6, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
     // Add more image objects as needed
 ];
 

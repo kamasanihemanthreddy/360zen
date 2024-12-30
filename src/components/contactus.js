@@ -1,11 +1,25 @@
 import * as React from 'react';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
 import { Col, FormControl, NavbarText, Row } from 'react-bootstrap';
 import line from '../images/Line 15.png'
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 function ContactUs() {
+
+    const [name, setName] = React.useState('')
+    const [phone, setPhone] = React.useState('')
+    const [email, setEmail] = React.useState('')
+    const [message, setMessage] = React.useState('')
+    const [response, setResponse] = React.useState('')
+    const [show, setShow] = React.useState(true);
+
+    const handleSubmit= (e) => {
+        e.preventDefault();
+        const FormData = {name, phone,email, message}
+        setResponse("We Recieved Your Message will get in touch soon ")
+    }
   
   return (
     <section className=''id='contactus'>
@@ -47,48 +61,67 @@ function ContactUs() {
                     <a href="https://www.instagram.com/360_zen/" target='_blank' className='font-weight-bold text-decoration-none text-secondary'>@360_Zen</a>
                 </Col>
             </Row>
-            <Row className='mt-3'>
-                <Col md={6}>
-                <Form.Floating className="mb-3">
-                    <Form.Control
-                    id="name"
-                    type="text"
-                    placeholder="Name"
-                    />
-                    <label htmlFor="floatingInputCustom">Name</label>
-                </Form.Floating>
-                <Form.Floating className='mb-3'>
-                    <Form.Control
-                    id="phone"
-                    type="text"
-                    placeholder="Phone"
-                    />
-                    <label htmlFor="floatingPasswordCustom">Phone Number</label>
-                </Form.Floating>
-                <Form.Floating className="mb-3">
-                    <Form.Control
-                    id="floatingInputCustom"
-                    type="email"
-                    placeholder="name@example.com"
-                    />
-                    <label htmlFor="floatingInputCustom">Email address</label>
+            <form onSubmit={handleSubmit}>
+                <Row className='mt-3'>
+                
+                    <Col md={6}>
+                   
+                    <Form.Floating className="mb-3">
+                        <Form.Control
+                        id="name"
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={(e)=>setName(e.target.value)}
+                        placeholder="Name"
+                        required
+                        />
+                        <label htmlFor="floatingInputCustom">Name</label>
                     </Form.Floating>
-                <FloatingLabel controlId="floatingTextarea2" label="Leave a message here">
-                    <Form.Control
-                    as="textarea"
-                    placeholder="Leave a message here"
-                    style={{ height: '100px' }}
-                    />
-                </FloatingLabel>
-                <Button variant="outline-warning" size="lg" className='mt-2 rounded-5 float-start'>
-                Submit
-                </Button>
-                </Col>
-                <Col md={6} className='mt-5'>
-                    {/* <img className='w-50' src={hotelbed} style={{transform:"rotate(15.5deg)"}}></img>
-                    <img className='w-50' src={budha} style={{marginLeft:"-70px",position:"relative"}}></img> */}
-                </Col>
-            </Row>
+                    <Form.Floating className='mb-3'>
+                        <Form.Control
+                        id="phone"
+                        type="text"
+                        placeholder="Phone"
+                        value={phone}
+                        onChange={(e)=>setPhone(e.target.value)}
+                        required
+                        />
+                        <label htmlFor="floatingPasswordCustom">Phone Number</label>
+                    </Form.Floating>
+                    <Form.Floating className="mb-3">
+                        <Form.Control
+                        id="floatingInputCustom"
+                        type="email"
+                        placeholder="name@example.com"
+                        value={email}
+                        onChange={(e)=>setEmail(e.target.value)}
+                        required
+                        />
+                        <label htmlFor="floatingInputCustom">Email address</label>
+                        </Form.Floating>
+                    <FloatingLabel controlId="floatingTextarea2" label="Leave a message here">
+                        <Form.Control
+                        as="textarea"
+                        placeholder="Leave a message here"
+                        style={{ height: '100px' }}
+                        value={message}
+                        onChange={(e)=>setMessage(e.target.value)}
+                        required
+                        />
+                    </FloatingLabel>
+                        <Button type="submit" variant="outline-warning" size="lg" className='mt-2 mb-2 rounded-5'>
+                        Submit
+                        </Button>
+                        {response && <Alert variant="success" onClose={() => setShow(false)} dismissible>{response}</Alert>}    
+                    </Col>
+                    
+                    <Col md={6} className='mt-5'>
+                        {/* <img className='w-50' src={hotelbed} style={{transform:"rotate(15.5deg)"}}></img>
+                        <img className='w-50' src={budha} style={{marginLeft:"-70px",position:"relative"}}></img> */}
+                    </Col>
+                </Row>
+            </form>
        </div>
     </section>
   );

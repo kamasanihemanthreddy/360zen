@@ -32,7 +32,7 @@ const ReadMore = ({ children }) => {
       setIsReadMore(!isReadMore);
   };
   return (<>
-          {isReadMore ? text.slice(0, 120) : text}
+          {isReadMore ? text.slice(0, 100) : text}
           <span
               onClick={toggleReadMore}
               className="read-or-hide"
@@ -53,6 +53,7 @@ function WeOffer(){
         slidesToShow: 3,
         slidesToScroll: 3,
         autoplay:true,
+        arrows: false,
         responsive: [
           {
             breakpoint: 1024,
@@ -82,10 +83,10 @@ function WeOffer(){
       };
     return (
         <>
-        <section id="weoffer">
-            <div className="p-5">
-                <Row>
-                    <Col md={3}>
+        <section id="weoffer" style={{"backgroundColor":"rgba(128, 128, 128, 0.25)"}}>
+            <div className="p-5" >
+                <Row >
+                    <Col md={3} style={{"backgroundColor":"white","border-radius":"20px"}}>
                     <span className='custom-font'>What We</span>
                     <span className='subheading-font' style={{display:"block"}}> Offer</span>
                     <img src={line} className="w-100"></img>
