@@ -5,8 +5,27 @@ import { Col, FormControl, NavbarText, Row } from 'react-bootstrap';
 import line from '../images/Line 15.png'
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import * as AWS from 'aws-sdk'
 
 function ContactUs() {
+    AWS.config.update({
+        region:"",
+        credentials:{
+            accessKeyId:"",
+            secretAccessKey:""
+        }
+    })
+    const ses = new AWS.SES({
+        region:"",
+        smtp:{
+            host:"",
+            port:587,
+            auth:{
+                user:"",
+                pass:""
+            },
+        },
+    })
 
     const [name, setName] = React.useState('')
     const [phone, setPhone] = React.useState('')
@@ -16,9 +35,31 @@ function ContactUs() {
     const [show, setShow] = React.useState(true);
 
     const handleSubmit= (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         const FormData = {name, phone,email, message}
+        const confirmationparams={
+            Source:"",/* from the aws source*/
+            Destination:{
+                ToAddresses:[]
+            },
+            Message:{
+                Subject:{
+                    Data:`${name} Tried Contacting You via Website`
+                },
+                Body:{
+                    Text:{
+                        Data:`
+                        Name: ${name} 
+                        Phone: ${phone}
+                        Email:${email}
+                        message:${message}`
+                    }
+                }
+            } 
+        };
         setResponse("We Recieved Your Message will get in touch soon ")
+        // const sentEmail = ses.sendEmail(confirmationparams).promise();
+        // sentEmail.then((data)=> setResponse("We Recieved Your Message will get in touch soon ")).catch((err) => setResponse(err))
     }
   
   return (
