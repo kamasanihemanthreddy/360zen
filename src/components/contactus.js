@@ -6,23 +6,22 @@ import line from '../images/Line 15.png'
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import * as AWS from 'aws-sdk'
-
 function ContactUs() {
     AWS.config.update({
-        region:"",
+        region:process.env.REACT_APP_AWS_REGION,
         credentials:{
-            accessKeyId:"",
-            secretAccessKey:""
+            accessKeyId:process.env.REACT_APP_AWS_ACCESSID,
+            secretAccessKey:process.env.REACT_APP_AWS_SECERTACCESS
         }
     })
     const ses = new AWS.SES({
-        region:"",
+        region:process.env.REACT_APP_AWS_REGION,
         smtp:{
-            host:"",
-            port:587,
+            host:process.env.REACT_APP_SMTP_HOST,
+            port:process.env.REACT_APP_SMTP_PORT,
             auth:{
-                user:"",
-                pass:""
+                user:process.env.REACT_APP_SMTP_USER,
+                pass:process.env.REACT_APP_SMTP_PASS
             },
         },
     })
@@ -35,7 +34,7 @@ function ContactUs() {
     const [show, setShow] = React.useState(true);
 
     const handleSubmit= (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         const FormData = {name, phone,email, message}
         const confirmationparams={
             Source:"",/* from the aws source*/
@@ -60,6 +59,10 @@ function ContactUs() {
         setResponse("We Recieved Your Message will get in touch soon ")
         // const sentEmail = ses.sendEmail(confirmationparams).promise();
         // sentEmail.then((data)=> setResponse("We Recieved Your Message will get in touch soon ")).catch((err) => setResponse(err))
+        setName("")
+        setPhone("")
+        setEmail("")
+        setMessage("")
     }
   
   return (
