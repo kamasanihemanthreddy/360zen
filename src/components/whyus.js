@@ -14,7 +14,7 @@ const whyus = [
 const WhyUs = () => { 
     return (
         <>
-            <section id="whywe" style={{"backgroundColor":"#80808040"}}>
+            <section id="whywe" style={{"backgroundColor":"#F4F4F4"}}>
                 <div className='p-5'>
                     <Row>
                         <Col>

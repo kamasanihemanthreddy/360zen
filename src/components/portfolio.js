@@ -2,28 +2,24 @@ import { Col, Row,Modal } from "react-bootstrap";
 import React,{ useState } from "react";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import gallery_1 from '../images/gallery_1.png'
-import gallery_2 from '../images/gallery_2.png'
-import gallery_3 from '../images/gallery_3.png'
-import gallery_4 from '../images/gallery_4.png'
-import gallery_5 from '../images/gallery_5.png'
-import gallery_6 from '../images/gallery_6.png'
-import gallery_7 from '../images/gallery_7.png'
-import gallery_8 from '../images/gallery_8.png'
+import gallery_1 from '../images/AvHomestay_rEC.jpg'
+import gallery_2 from '../images/img-1.jpg'
+import gallery_3 from '../images/img-2.jpg'
+import gallery_4 from '../images/img-3.jpg'
+import gallery_5 from '../images/img-4.jpg'
+import gallery_6 from '../images/img-5.jpg'
+// import gallery_7 from '../images/gallery_7.png'
+// import gallery_8 from '../images/gallery_8.png'
 import Slider from "react-slick";
 
-const all =[gallery_1,gallery_2,gallery_3,gallery_4,gallery_5,gallery_6,gallery_7,gallery_8]
-const hotel =[gallery_3,gallery_5,gallery_6]
-const realestate =[gallery_2,gallery_4]
-const resturents =[gallery_7,gallery_8]
 
 const images = [
-    { src: gallery_1, size: 'big', text:"AV HomeStay,", address:"Pondicherry, India", image_name:"Hotel" },
-    { src: gallery_3, size: 'small', text:"Casa Grande, ",address:"Mumbai, India", image_name:"Real Estate"},
-    { src: gallery_4, size: 'small', text:"Le Coramandel, ",address:"Pondicherry, India", image_name:"Restaurant"},
-    { src: gallery_2, size: 'small', text:"Taj Hotel, ",address:"Mumbai, India", image_name:"Hotel" },
-    { src: gallery_5, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
-    { src: gallery_4, size: 'small', text:"AV HomeStay",address:"Pondicherry, India", image_name:"Hotel"},
+    { src: gallery_1, size: 'big', text:"AV HomeStay,", address:"Pondicherry, India", image_name:"Hotel", website:"https://360zen.s3.ap-south-1.amazonaws.com/AV_Home_Stay/index.htm"},
+    { src: gallery_2, size: 'small', text:"",address:"", image_name:"Real Estate", website:"#portfolio"},
+    { src: gallery_3, size: 'small', text:"",address:"", image_name:"Restaurant", website:"#portfolio"},
+    { src: gallery_4, size: 'small', text:"",address:"", image_name:"Hotel", website:"#portfolio" },
+    { src: gallery_5, size: 'small', text:"",address:"", image_name:"Hotel", website:"#portfolio"},
+    { src: gallery_6, size: 'small', text:"",address:"", image_name:"Hotel", website:"#portfolio"},
     // Add more image objects as needed
 ];
 
@@ -103,7 +99,7 @@ function Portfolio(){
     const handleShow = (image) => { setSelectedImage(image.src); setShow(true); }; 
     return ( 
        <>
-       <section >
+       <section style={{"backgroundColor":"#F4F4F4"}} id="portfolio">
         <div className="p-5">
         <Row>
        <Col md={12}>
@@ -117,7 +113,7 @@ function Portfolio(){
                     className={`portfolio-item ${image.size}`} 
                     key={index} onClick={() => 
                     handleShow(image)} >
-                     <img src={image.src} alt={`Gallery ${index}`} className="img-fluid" /> 
+                     <a href={image.website}><img src={image.src} alt={`Gallery ${index}`} className="img-fluid" /> </a>
                      <div className="image-text">
                         {image.image_name} 
                      </div>
@@ -125,12 +121,13 @@ function Portfolio(){
                         {image.text} <span style={{"font-size":"smaller","font-weight":"400"}}>{image.address}</span>
                      </div>
                       </div> 
-            ))} </div> 
-            <Modal show={show} onHide={handleClose} centered size="lg"> 
+                    ))} 
+            </div>
+            {/* <Modal show={show} onHide={handleClose} centered size="lg"> 
                 <Modal.Body className="p-0"> 
                     <img src={selectedImage} alt="Full Screen" className="img-fluid w-100" /> 
                 </Modal.Body> 
-                </Modal> 
+                </Modal>  */}
             </div> 
         </div>
        </section>

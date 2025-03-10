@@ -37,9 +37,9 @@ function ContactUs() {
         e.preventDefault();
         const FormData = {name, phone,email, message}
         const confirmationparams={
-            Source:"",/* from the aws source*/
+            Source:process.env.REACT_APP_SOURCE,/* from the aws source*/
             Destination:{
-                ToAddresses:[]
+                ToAddresses:process.env.REACT_APP_TO.split(',')
             },
             Message:{
                 Subject:{
@@ -56,9 +56,9 @@ function ContactUs() {
                 }
             } 
         };
-        setResponse("We Recieved Your Message will get in touch soon ")
-        // const sentEmail = ses.sendEmail(confirmationparams).promise();
-        // sentEmail.then((data)=> setResponse("We Recieved Your Message will get in touch soon ")).catch((err) => setResponse(err))
+        // 
+        const sentEmail = ses.sendEmail(confirmationparams).promise();
+        sentEmail.then((data)=> setResponse("We Recieved Your Message will get in touch soon ")).catch((err) => setResponse(err))
         setName("")
         setPhone("")
         setEmail("")
@@ -66,7 +66,7 @@ function ContactUs() {
     }
   
   return (
-    <section className=''id='contactus'>
+    <section className=''id='contactus' style={{"backgroundColor":"#F4F4F4"}}>
         <div className='p-5'>
             <Row>
                 <Col md={12} className=''>
@@ -79,7 +79,7 @@ function ContactUs() {
                         <i className='bi bi-phone-vibrate text-warning' ></i>
                         <label>Phone</label>
                     </div>
-                    <a href="" className='font-weight-bold text-decoration-none text-secondary'>+91 99591 50154</a>
+                    <a href="" className='font-weight-bold text-decoration-none text-secondary'>+91 99948 60154</a>
                 </Col>
                 <Col md={3} className='p-3'>
                     <div className='d-flex gap-2' style={{fontWeight:"bold",fontSize:"20px"}}>

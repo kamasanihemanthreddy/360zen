@@ -1,7 +1,8 @@
 import { Col, Row } from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
 import bedroomimg from '../images/doublebedroom.jpeg'
-import villhall from '../images/villahall.jpeg'
+import villhall from '../images/RealEstate.jpg'
+import customvr from '../images/CustomVR.jpg'
 import hometheater from '../images/hometheater.jpeg'
 import line from '../images/Line 15.png'
 import React,{ useState } from "react";
@@ -20,7 +21,7 @@ const data =[{
     content:"Attract diners or event planners with an immersive, interactive preview of your restaurant or venue. By our 360-degree virtual tours."
 },{
   title:"04.Custom Virtual Tour Solutions",
-  image:bedroomimg,
+  image:customvr,
   content:"Every business is unique and so are it needs. we offer custom virtual tour solutions tailored to your specific industry and audience. wheather you want to add interactive elements, include voiceovers, or design a fully branded tour, we got you covered."
 }]
 
@@ -83,10 +84,10 @@ function WeOffer(){
       };
     return (
         <>
-        <section id="weoffer" style={{"backgroundColor":"rgba(128, 128, 128, 0.25)"}}>
+        <section id="weoffer" style={{"backgroundColor":"#F4F4F4"}}>
             <div className="p-5" >
                 <Row >
-                    <Col md={3} style={{"backgroundColor":"white","border-radius":"20px"}}>
+                    <Col md={3}>
                     <span className='custom-font'>What We</span>
                     <span className='subheading-font' style={{display:"block"}}> Offer</span>
                     <img src={line} className="w-100"></img>

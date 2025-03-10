@@ -45,13 +45,13 @@
   transition: transform 0.2s ease-in-out;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Reduced height for smaller images */
+  /* height: 200px; Reduced height for smaller images */
 }
 
 .portfolio-item.big {
   grid-column: span 2;
   grid-row: span 2;
-  height: 400px; /* Adjusted height for big images */
+  /* height: 400px; Adjusted height for big images */
 }
 
 .portfolio-item img {
@@ -65,7 +65,7 @@
   bottom: 50px;
   left: 10px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   padding: 5px;
   border-radius: 3px;
   border:solid 1px;
@@ -76,7 +76,7 @@
   bottom: 10px;
   left: 10px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   padding: 5px;
   border-radius: 5px;
   font-weight: 600;
@@ -185,13 +185,21 @@
 
 
 @media screen and (max-width: 768px) { 
+
+  .desktop-view{
+    display:none !important;
+  }
+  
+  .mobile-view{
+    display:block !important;
+  }
   .custom-carousel-caption { 
     padding: 0px !important;
-    bottom: 4.5rem !important; 
+    bottom: 8.5rem !important; 
     font-size: 10px;
   }
   .carousel-image{
-    height:500px !important;
+    height:100vh !important;
   }
   .header-title{
     font-size: 1.25rem !important;
@@ -200,7 +208,7 @@
     font-size: 0.75rem !important;
   }
   .substract-caption{
-    bottom:-.75rem !important
+    bottom:3.75rem !important
     
   }
   .substract-img{
@@ -234,13 +242,16 @@
   line-height: 28px;
   text-align: justify;
 }
+.carousel-image{
+  height:100vh !important;
+}
 .custom-font{
   /* Let’s */
 font-family: 'Neue Haas Grotesk Display Pro';
 font-style: normal;
 font-size: 50px;
 -webkit-text-stroke: .5px gray;
--webkit-text-fill-color: white;
+-webkit-text-fill-color: #F4F4F4;
 }
 
 .subheading-font{
@@ -255,7 +266,7 @@ color: orange !important;
   background-color: var(--bs-body-bg);
   border-color: orange;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgb(255 193 7);
+  box-shadow: 0 0 0 0.1rem rgb(255 193 7);
 }
 
 
@@ -287,3 +298,4 @@ color: orange !important;
 
 .grid-item { opacity: 0; transform: translateX(100%); animation: slide-in 0.5s forwards; } 
 @keyframes slide-in { to { opacity: 1; transform: translateX(0); } }
+

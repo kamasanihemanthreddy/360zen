@@ -20,7 +20,7 @@ function Footer() {
                         <a className='text-white' href="https://www.instagram.com/360_zen/" target='_blank'><i class="bi bi-instagram h1"></i></a>
                         <a className='text-white' href="https://www.facebook.com/profile.php?id=61566455641451" target='_blank'><i class="bi bi-facebook h1" ></i></a>
                         <a className='text-white' href="https://www.linkedin.com/company/360zen/?viewAsMember=true" target='_blank'><i class="bi bi-linkedin h1" ></i></a>
-                        <a className='text-white' href="https://wa.me/9959150154" target='_blank'><i class="bi bi-whatsapp h1"></i></a>
+                        <a className='text-white' href="https://wa.me/+919994860154" target='_blank'><i class="bi bi-whatsapp h1"></i></a>
                     </div>
                     <p>{(new Date().getFullYear())} - 360Zen All Right Reserved</p>
                 </div>

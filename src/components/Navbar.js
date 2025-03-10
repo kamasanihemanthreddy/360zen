@@ -7,10 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 function App() {
   
   return (
-    <Navbar expand="lg" className="bg-transparent" id="home">
+    <Navbar expand="lg" className="bg-transparent navbar-dark bg-primary" id="home">
       <Container>
         <Navbar.Brand href="#home"><img src={logo} style={{"max-width":"200px"}}></img></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='rounded-5'></Navbar.Toggle>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='nav-light'></Navbar.Toggle>
         <Navbar.Collapse className="justify-content-end">
            <Nav className="flex-column float-end">
             <Nav.Link href="#home" className='text-white p-1 link-hover'>Home</Nav.Link>

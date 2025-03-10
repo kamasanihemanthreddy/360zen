@@ -7,8 +7,8 @@ import { Col, NavbarText, Row } from 'react-bootstrap';
 function App() {
   
   return (
-    <section className='bg-default' id="about-us"> 
-        <div className='p-2'>
+    <section className='bg-default' id="about-us" style={{"backgroundColor":"#F4F4F4"}}> 
+        <div className='p-5'>
         <Row className='m-3'>
             <Col md={6} >
             <img src={vr} className='w-100 '></img>
