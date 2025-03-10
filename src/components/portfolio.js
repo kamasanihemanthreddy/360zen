@@ -15,7 +15,7 @@ import Slider from "react-slick";
 
 const images = [
     { src: gallery_1, size: 'big', text:"AV HomeStay,", address:"Pondicherry, India", image_name:"Hotel", website:"https://360zen.s3.ap-south-1.amazonaws.com/AV_Home_Stay/index.htm"},
-    { src: gallery_2, size: 'small', text:"",address:"", image_name:"Real Estate", website:"#portfolio"},
+    { src: gallery_2, size: 'small', text:"",address:"", image_name:"Real Estate", website:"https://360zen.s3.ap-south-1.amazonaws.com/Tranqville+Resort/index.htm"},
     { src: gallery_3, size: 'small', text:"",address:"", image_name:"Restaurant", website:"#portfolio"},
     { src: gallery_4, size: 'small', text:"",address:"", image_name:"Hotel", website:"#portfolio" },
     { src: gallery_5, size: 'small', text:"",address:"", image_name:"Hotel", website:"#portfolio"},
